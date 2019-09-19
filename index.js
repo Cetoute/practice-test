@@ -35,3 +35,25 @@ function largestNumber(num) {
 		}
 	}
 }
+
+//given two integers, l and r, print all the odd numbers between l and r (l and r inclusive)
+
+function oddNumbers(l, r) {
+	let arr = [];
+	let smaller = l < r ? l : r;
+	let larger = smaller === l ? r : l;
+	let smallerOdd = !(smaller % 2 === 0) ? true : false;
+
+	for (let i = smaller; i <= larger; i += 2) {
+		if (smallerOdd) {
+			arr.push(i);
+		} else {
+			arr.push(i + 1);
+		}
+	}
+	return arr;
+}
+
+// oddNumbers(-3, -9)
+
+console.log(4 % 2);
